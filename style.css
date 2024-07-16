@@ -204,10 +204,10 @@ footer{
  /* header sections */
     header .title-one, header .title-two{
         text-align: center;
-        font-size: 2em;
+        font-size: 2.2em;
     }
     header .pera{
-      padding: 0px 18em;
+      padding: 0px 20em;
     }
 
 
@@ -224,6 +224,10 @@ footer{
 
     gap: 1.5em;
 
+  }
+  
+  section article h3{
+      font-size: 1.5em
   }
 
   section{
