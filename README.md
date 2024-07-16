@@ -1,8 +1,8 @@
 
 ### Screenshot
 
-![./design/desktop-preview.jpg]
-![./design/mobile-design.jpg]
+![desktop-preview](1./design/desktop-preview.jpg)
+![mobile-design](./design/mobile-design.jpg)
 
 
 ### Links
