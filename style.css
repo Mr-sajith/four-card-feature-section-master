@@ -1,0 +1,229 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* styles guide */
+:root{
+/* ###  border colors */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* ### Neutral */
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* fonts */
+@font-face {
+    font-family: extraLight;
+    src: url(./fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: semiBold;
+    src: url(./fonts/Poppins-SemiBold.ttf)
+}
+
+
+
+
+.contener{
+    background-color: var(--Very-Light-Gray);
+    display: flex;
+    flex-flow: column wrap;
+
+    font-size: 15px;
+    margin: 15vw 6vw;
+}
+
+
+/* header section--------------------------------- */
+header .title-one{
+    font-family: extralight;
+    color: var(--Very-Dark-Blue);
+
+    font-weight: lighter;
+    font-size: 1.5em;
+    
+    /* text-align: center; */
+}
+header .title-two{
+    font-family: regular;
+    color: var(--Very-Dark-Blue);
+
+    font-weight: bold;
+    font-size: 1.5em;
+
+    /* text-align: center; */
+    
+}
+header .pera{
+    font-family: regular;
+    color: var(--Grayish-Blue);
+    margin: 1.5em 0px;
+    /* text-align: center; */
+}
+
+
+
+/* box section----------------------------------- */
+main{
+    margin-top: 2em;
+}
+
+/* box styles */
+
+section{
+    padding: 1.5em;
+    margin: 2em 0px;
+    /* width: 280px; */
+    background-color: white;
+
+
+    /* box's border styls */
+    border-top-width: 0.3em;
+    border-top-style: solid;
+    border-radius: 0.5em;
+
+    /* boder shadow */
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+section article{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+section article h3{
+    margin-bottom: 0.5em;
+    color: var(--Very-Dark-Blue);
+    font-family: semiBold;
+    color: var(--Very-Dark-Blue);
+
+}
+section article p{
+    line-height: 1.7em;
+    margin-bottom: 0.5em;
+    color: var(--Grayish-Blue);
+    font-family: regular;
+    
+
+}
+section article picture{
+    align-self: self-end;
+    margin: 1em;
+
+}
+
+
+/* box's border colores */
+.supervisor{
+    border-top-color: var(--Cyan);
+    grid-area: supervisor;
+}
+
+.team-builder{
+    border-top-color: var(--Red);
+    grid-area: team;
+}
+
+.karma{
+    border-top-color: var(--Orange);
+    grid-area: karma;
+}
+
+.calculator{
+    border-top-color: var(--Blue);
+    grid-area: calulator;
+}
+
+
+
+
+/* media qurry for rensponsive=------------------------------  */
+
+
+/* for moblie --------------------*/
+@media screen  and (min-width: 344px){
+    header .title-one, header .title-two{
+        font-size: 1.8em;
+    }
+}
+
+
+/* for tabs ---------------------*/
+@media screen and (min-width: 700px){
+
+ /* header sections */
+     header .title-one, header .title-two, header .pera{
+        text-align: center;
+    }
+    header .pera{
+      padding: 0px 2em;
+    }
+
+  /* main box sections */
+   
+  main{
+    display: grid;
+  
+    grid-template-areas: 
+    "supervisor team"
+    "karma calulator";
+
+    gap: 1.5em;
+  }
+
+  section{
+    margin: 0px;
+  }
+    
+}
+
+
+/* for disktop ------------------- */
+@media screen  and (min-width: 900px){
+
+    .contener{
+        margin: 6vw 10vw;
+    }
+
+ /* header sections */
+    header .title-one, header .title-two, header .pera{
+        text-align: center;
+    }
+    header .pera{
+      padding: 0px 17em;
+    }
+
+
+ /* main box sections */
+   
+   main{
+    display: grid;
+  
+    grid-template-areas: 
+    "supervisor team calulator"
+    "supervisor karma calulator";
+
+    align-items: center;
+
+    gap: 1.5em;
+
+
+    grid-auto-flow: dense;
+  }
+
+  section{
+    margin: 0px;
+  }
+
+}
+
