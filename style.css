@@ -202,12 +202,19 @@ footer{
     }
 
  /* header sections */
+
+    header{
+       display: grid;   
+       justify-content: center;
+       aling-content: center;
+       }
+      
     header .title-one, header .title-two{
         text-align: center;
         font-size: 2.2em;
     }
     header .pera{
-      padding: 0px 17em;
+      width: 50vw;
     }
 
 
@@ -221,8 +228,12 @@ footer{
     "supervisor karma calulator";
 
     align-items: center;
+    grid-template-columns: repeat(3,minmax(auto,300px));
+    grid-template-rows: 1fr 1fr;
 
     gap: 1.5em;
+    
+    justify-content: center;
 
   }
   
